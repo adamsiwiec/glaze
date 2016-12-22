@@ -1,0 +1,37 @@
+{
+  "name": "glaze",
+  "version": "0.1.0",
+  "description": "A simple and fast P2P voice chat for gaming",
+  "main": "main.js",
+  "scripts": {
+    "pack": "build --dir",
+    "distwindows": "build -w",
+    "distlinux": "build -l",
+    "distmac": "build -ml",
+    "dist": "build -mwl",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/adamsiwiec/glaze",
+  "author": "Adam Siwiec",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-builder": "^10.9.3",
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.1.1"
+  },
+  "build": {
+    "appId": "com.adamsiwiec.glaze",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "squirrel"
+    },
+    "linux": {
+      "target": "tar.gz"
+    }
+  }
+}
