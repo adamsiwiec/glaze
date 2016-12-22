@@ -12,20 +12,35 @@
 </head>
 
 <body>
-    <div class ="container">
+    <div class = "room-container col-xs-4 col-xl-3">
     <div class="room mt-2 col-xs-offset-1">
         <h4 class = "text-muted">Room: </h4>
+        <h5 class = 'display room-name'></h5>
+        <h4 class = "text-muted">Chat Count: </h4>
+        <h5 class = 'display chat-count'></h5>
+        <h4 class = "text-muted">Username: </h4>
+        <h5 class = 'display username'></h5>
+
+
+
+
+
     </div>
-    <div id="status"></div>
-
-
 </div>
-    <script src="https://simplewebrtc.com/latest-v2.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>-->
+
+<div  class="right-status-container col-xs-8 col-xl-9">
+    <div id="avatar"></div>
+    <div id="status-container">
+        <h4 class = "pl-1 pt-1">Status: </h4>
+        <div class = "pl-1" id = "status">
+        </div>
+    </div>
+</div>
+
+    <script src="build/rtc.js"></script>
     <script src="build/app.bundle.js"></script>
 
+    <link rel="stylesheet" href="index.css">
 
 </body>
 

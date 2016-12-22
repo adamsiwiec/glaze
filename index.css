@@ -1,0 +1,39 @@
+.room-container {
+    height:100vh;
+    background-color: #FDFDFD;
+}
+
+.right-status-container {
+    //border-left: 1px solid gray;
+    height: 100vh;
+    padding: 0;
+}
+
+#avatar {
+    height:70vh;
+    background-color: #0275d8;
+    //border-bottom: 1px solid gray;
+}
+
+#status-container {
+    height:30vh;
+    background-color: #d3d3d3;
+}
+
+#status {
+    overflow: auto;
+}
+
+.avatar-div {
+    background-color: #d3d3d3;
+    opacity: 0.95;
+    height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.avatar-name {
+
+}

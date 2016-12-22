@@ -18,8 +18,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var room = getUrlParameter('room');
 var nickname = getUrlParameter('nick');
 var count = 0;
-console.log(nickname);
-$('.room').append("<span class = 'display'>" + room + "<span>");
+$('.chat-count').text(count);
+$('.username').text(nickname);
+$('.room-name').text(room);
 
 
 var webrtc = new SimpleWebRTC({
@@ -50,8 +51,8 @@ webrtc.on('readyToCall', function() {
 
 webrtc.on('videoAdded', function(videoEl, peer) {
     count += 1;
-    console.log("NICK", peer.nick);
-    $('#status').append("<p>" + peer.nick + " Joined !</p>");
+    $('#status').append("<p>" + peer.nick + " Joined!</p>");
+    $('#avatar').append("<div class = '" + peer.nick + " col-xs-12 col-sm-6 col-lg-4 avatar-div text-xs-center'><p class = 'avatar-name'>" + peer.nick + "</p> </div>")
 
     var grammar1;
     var grammar2;
@@ -62,14 +63,14 @@ webrtc.on('videoAdded', function(videoEl, peer) {
         grammar1 = "are";
         grammar2 = "people"
     }
-    $('#status').append("<p>There " + grammar1 + " " + count + " other " + grammar2 + " in the chat!</p>");
+    $('.chat-count').text(count);
 
 });
 
 webrtc.on('videoRemoved', function(videoEl, peer) {
     count -= 1;
-    $('#status').append("<p>" + peer.nick + " left !</p>");
-    $('#status').append("<p>There are " + count + " other people in the chat!</p>");
+    $('#status').append("<p>" + peer.nick + " left!</p>");
+    $('.chat-count').text(count);
 
 
 });
