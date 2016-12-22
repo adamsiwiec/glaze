@@ -15,7 +15,7 @@ let introWindow
 
 function createWindow () {
   // Create the browser window.
-  introWindow = new BrowserWindow({width: 600, height: 450, resizable: false})
+  introWindow = new BrowserWindow({width: 600, height: 480, resizable: false})
   // and load the index.html of the app.
 
 
