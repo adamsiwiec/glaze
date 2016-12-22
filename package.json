@@ -7,7 +7,7 @@
     "pack": "build --dir",
     "distwindows": "build -w",
     "distlinux": "build -l",
-    "distmac": "build -ml",
+    "distmac": "build -m",
     "dist": "build -mwl",
     "start": "electron ."
   },
