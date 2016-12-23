@@ -1,10 +1,6 @@
-<h1 align="center">
-	<br>
-	<img width="400" src="http://i.imgur.com/NcYFw0Q.png" alt="XO">
-	<br>
-	<br>
-	<br>
-</h1>
+<h6 align="center">
+    <img  width="150" height="150" src="http://i.imgur.com/NcYFw0Q.png" alt="Glaze">
+    </h6>
 
 # Glaze
 [![Github All Releases](https://img.shields.io/github/downloads/adamsiwiec/glaze/total.svg)]()
