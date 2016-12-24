@@ -41,7 +41,7 @@ createForm.on('submit', function(event) {
 
 
     if (validate($('.room').val(), $(".nick").val())) {
-        const htmlPath = path.join('file://', __dirname, 'index.html?room=' + $('.room').val() + "&nick=" + $(".nick").val())
+        const htmlPath = path.join('file://', __dirname, '../html/index.html?room=' + $('.room').val() + "&nick=" + $(".nick").val())
         win = new BrowserWindow({
                 width: 800,
                 height: 700

@@ -6,8 +6,8 @@ var SRC = path.join(__dirname, 'src/');
 module.exports = {
     entry: SRC,
     output: {
-        publicPath: "js/",
-        path: './js',
+        publicPath: "src/js/",
+        path: './src/js',
         filename: 'app.bundle.js'
     },
     module: {

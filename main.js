@@ -21,7 +21,7 @@ function createWindow () {
 
 
   introWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'start.html'),
+    pathname: path.join(__dirname, 'src/html/start.html'),
     protocol: 'file:',
     slashes: true
   }))
