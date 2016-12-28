@@ -1,6 +1,6 @@
 {
   "name": "glaze",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A simple and fast P2P voice chat for gaming",
   "main": "main.js",
   "scripts": {
@@ -43,7 +43,7 @@
       "target": "dmg"
     },
     "win": {
-      "target": "nsis"
+      "target": "squirrel"
     },
     "linux": {
       "target": "tar.gz"
