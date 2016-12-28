@@ -2,7 +2,8 @@ const BrowserWindow = require('electron').remote.BrowserWindow
 const path = require('path')
 const url = require('url')
 const remote = require('electron').remote
-var $ = require('jquery')
+const $ = require('jquery')
+const ipc = require('electron').ipcRenderer
 
 function validate(room, nick) {
     return (room && nick) && nick.indexOf(' ') === -1;
@@ -41,18 +42,28 @@ createForm.on('submit', function(event) {
 
 
     if (validate($('.room').val(), $(".nick").val())) {
-        const htmlPath = path.join('file://', __dirname, '../html/index.html?room=' + $('.room').val() + "&nick=" + $(".nick").val())
-        win = new BrowserWindow({
-                width: 800,
-                height: 700
-            })
+        //const htmlPath = path.join('file://', __dirname, '../html/index.html?room=' + $('.room').val() + "&nick=" + $(".nick").val())
+        //win = new BrowserWindow({
+        //        width: 800,
+        //        height: 700
+        //    })
             // win.on('resize', updateReply)
             // win.on('move', updateReply)
-            //win.on('close', function () { win = null })
-        win.loadURL(htmlPath)
-        win.show()
-        var current = remote.getCurrentWindow().removeAllListeners();
-        current.close()
+        //win.on('close', function () {
+        //    ipc.send('main-windows-closed');
+        //     win = null;
+        // })
+    //    win.loadURL(htmlPath)
+    //    win.show()
+
+    ipc.send("close-starter", {
+        room: $('.room').val(),
+        nick: $(".nick").val()
+
+    });
+        var current = remote.getCurrentWindow();
+        current.close();
+
 
         // function updateReply () {
         //   const manageWindowReply = document.getElementById('manage-window-reply')

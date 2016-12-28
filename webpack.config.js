@@ -29,8 +29,11 @@ module.exports = {
             loader: "file-loader"
         }, {
             test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loaders: ['file-loader', 'image-webpack?{optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}, mozjpeg: {quality: 65}}']
+            loaders: ['file?name=img/[name].[ext]', 'image-webpack?{optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}, mozjpeg: {quality: 65}}']
         }]
+    },
+    node: {
+        fs: "empty"
     },
 
     plugins: [

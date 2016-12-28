@@ -1,5 +1,5 @@
 .room-container {
-    height:100vh;
+    height: 100vh;
     background-color: #FDFDFD;
 }
 
@@ -10,12 +10,12 @@
 }
 
 #avatar {
-    height:70vh;
+    height: 70vh;
     background-color: #0275d8;
 }
 
 #status-container {
-    height:30vh;
+    height: 30vh;
     background-color: #d3d3d3;
 }
 
@@ -27,12 +27,43 @@
     background-color: #d3d3d3;
     opacity: 0.95;
     height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+#me {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #d3d3d3;
+}
 
-.avatar-name {
+a {
+    color: #d3d3d3;
+}
 
+a:link {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+a:active {
+    color: #d3d3d3;
+    text-decoration: none;
+}
+
+.heart {
+    height: 30px;
+    width: 30px;
 }
