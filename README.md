@@ -1,6 +1,6 @@
 <h6 align="center">
-    <img  width="150" height="150" src="http://i.imgur.com/NcYFw0Q.png" alt="Glaze">
-    </h6>
+<img  width="150" height="150" src="http://i.imgur.com/NcYFw0Q.png" alt="Glaze">
+</h6>
 
 # Glaze
 [![Github All Releases](https://img.shields.io/github/downloads/adamsiwiec/glaze/total.svg)]()
@@ -9,6 +9,8 @@
 
 A simple and fast p2p voice chat for gaming (or anything else)
 
+
+[![Imgur](http://i.imgur.com/jTRdGxr.gif)]()
 
 
 
