@@ -247,6 +247,7 @@ function createWindow() {
     introWindow = new BrowserWindow({
             width: 600,
             height: 480,
+            title: "Glaze",
             resizable: false
         })
         // and load the index.html of the app.
@@ -271,7 +272,8 @@ function createMainWindow(arg) {
     const htmlPath = path.join('file://', __dirname, 'src/html/index.html?room=' + arg.room + "&nick=" + arg.nick)
     win = new BrowserWindow({
            width: 800,
-           height: 700
+           height: 700,
+           title: "Glaze"
        })
     win.on('closed', function () {
          win = null;

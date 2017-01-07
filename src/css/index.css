@@ -1,6 +1,7 @@
 .room-container {
     height: 100vh;
     background-color: #FDFDFD;
+    margin:0;
 }
 
 .right-status-container {

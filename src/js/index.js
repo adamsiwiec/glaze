@@ -51,7 +51,7 @@ webrtc.on('readyToCall', function () {
 webrtc.on('videoAdded', function (videoEl, peer) {
 	count += 1;
 	$('#status').append('<p>' + peer.nick + ' Joined!</p>');
-	$('#avatar').append('<div class = \'' + peer.nick + ' col-xs-12 col-sm-6 col-lg-4 avatar-div text-xs-center\'><p class = \'avatar-name ' + peer.nick + '\'>' + peer.nick + '</p> </div>');
+	$('#avatar').append('<div class = \'' + peer.nick + ' col-12 col-sm-6 col-lg-4 avatar-div text-center\'><p class = \'avatar-name ' + peer.nick + '\'>' + peer.nick + '</p> </div>');
 
 	var grammar1;
 	var grammar2;

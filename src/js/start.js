@@ -13,17 +13,17 @@ let create = $('#manage-window');
 let createForm = $(`
     <form>
     <div class = 'form-group'>
-    <input class = 'room text-xs-center form-control' autofocus placeholder = 'e.g google conference' type='text'>
+    <input class = 'room text-center form-control' autofocus placeholder = 'e.g google conference' type='text'>
     <p class = 'room-error'>
     </p>
     <br>
-    <input class = 'nick text-xs-center form-control' placeholder = 'e.g Adam' type='text'>
+    <input class = 'nick text-center form-control' placeholder = 'e.g Adam' type='text'>
     <p class = 'nick-error'>
     </p>
     <p class = 'space-error'>
     </p>
     </div>
-    <button class = 'btn btn-primary col-xs-2 offset-xs-10' type='submit' >
+    <button class = 'btn btn-primary col-2 offset-10' type='submit' >
     Go
     </button
     </form>`);
