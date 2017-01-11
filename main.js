@@ -8,6 +8,8 @@ const Menu = electron.Menu
 const path = require('path')
 const url = require('url')
 const ipc = require('electron').ipcMain
+require('electron-dl')();
+
 
 let template = [{
     label: 'Edit',
