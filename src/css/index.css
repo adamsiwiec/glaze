@@ -1,3 +1,9 @@
+h4, p {
+    font-family: 'Roboto', sans-serif;
+}
+h5 {
+    font-family: 'Lato', sans-serif;
+}
 .room-container {
     height: 100vh;
     background-color: #FDFDFD;
