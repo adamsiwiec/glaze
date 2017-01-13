@@ -15,7 +15,6 @@
   "author": "Adam Siwiec",
   "license": "MIT",
   "devDependencies": {
-    "bootstrap": "^4.0.0-alpha.4",
     "css-loader": "^0.26.1",
     "devtron": "^1.4.0",
     "electron": "^1.4.13",
