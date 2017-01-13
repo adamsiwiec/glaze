@@ -1,0 +1,59 @@
+
+
+.top, .content {
+    background-color: rgb(244, 245, 246);
+
+}
+
+h2, h3 {
+    margin-top: 100px;
+}
+
+.btn {
+    height: 40px !important;
+}
+
+.padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+pre {
+    background-color: #DCDCDC;
+    padding: 10px;
+}
+
+
+.header {
+    height: 100vh;
+    text-align: right;
+}
+
+/*.info {
+    height: 100vh;
+}*/
+
+.intro {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.glaze {
+    content:url("../../build/background.png");
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+
+.header {
+    text-align: center;
+}
+
+}
+
+footer {
+    background-color: rgb(244, 245, 246);
+}

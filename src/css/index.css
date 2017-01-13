@@ -10,6 +10,9 @@ h5 {
     margin:0;
 }
 
+pre {
+    background-color: green;
+}
 .right-status-container {
     //border-left: 1px solid gray;
     height: 100vh;
