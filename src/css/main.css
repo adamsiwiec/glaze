@@ -30,9 +30,40 @@ pre {
     text-align: right;
 }
 
-/*.info {
-    height: 100vh;
-}*/
+.cls-1 {
+    fill: none;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    animation: dash 5s linear forwards;
+}
+
+.cls-2 {
+
+    fill: none;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: dash 5s linear forwards;
+}
+
+.cls-3 {
+    fill: none;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: dash 5s linear forwards;
+
+}
+
+@keyframes dash {
+
+    to {
+        stroke-dashoffset: 0;
+
+
+    }
+
+
+}
+
 
 .intro {
     display: flex;
@@ -41,7 +72,7 @@ pre {
 }
 
 .glaze {
-    content:url("../../build/background.png");
+    max-height: 500px;
     margin: 0 auto;
 }
 
