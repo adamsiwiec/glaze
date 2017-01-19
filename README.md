@@ -18,15 +18,8 @@ A simple and fast p2p voice chat for gaming (or anything else)
 
 Glaze is available for Windows, macOS, and Linux.
 
-For the latest build (unstable):
-
-1. Check out the [dist](https://github.com/adamsiwiec/glaze/tree/master/dist) directory and find your system's installer.
-2. Then just click on it and download and run it to your computer.
-
-For the latest release (stable):
-
 1. Go to the [releases](https://github.com/adamsiwiec/glaze/releases) and find your system's installer there.
-2. Then just click on it and download and run it to your computer.
+2. Then just click on it, download, and run it to your computer.
 
 
 ## Want to hack on Glaze?
