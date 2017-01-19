@@ -1,5 +1,5 @@
 <h6 align="center">
-<img  width="150" height="150" src="http://i.imgur.com/NcYFw0Q.png" alt="Glaze">
+<img  width="150" height="150" src="http://i.imgur.com/E88z0JQ.png" alt="Glaze">
 </h6>
 
 # Glaze
