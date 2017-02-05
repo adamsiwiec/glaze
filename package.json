@@ -1,6 +1,6 @@
 {
   "name": "glaze",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "A simple and fast P2P voice chat for gaming",
   "main": "main.js",
   "scripts": {
