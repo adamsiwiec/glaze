@@ -44,7 +44,6 @@ var webrtc = new SimpleWebRTC({
 webrtc.on('readyToCall', function () {
     // you can name it anything
 	webrtc.joinRoom(room, function (err, res) {
-		console.log(err);
 	});
 });
 

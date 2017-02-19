@@ -5,6 +5,7 @@ const Menu = electron.Menu
 const path = require('path')
 const url = require('url')
 const ipc = require('electron').ipcMain
+const autoUpdater = require("electron-updater").autoUpdater
 
 let template = [{
     label: 'Edit',
@@ -126,7 +127,7 @@ let template = [{
     submenu: [{
         label: 'Learn More',
         click: function() {
-            electron.shell.openExternal('http://electron.atom.io')
+            electron.shell.openExternal('https://siwiec.us/glaze')
         }
     }]
 }]
@@ -278,15 +279,40 @@ function createMainWindow(arg) {
 
    win.loadURL(htmlPath)
    win.show()
+
+win.webContents.on('dom-ready', () => {
+
+
+   autoUpdater.on('update-available', (ev, info) => {
+       win.webContents.send('message', "Update Available")
+
+   })
+   autoUpdater.on('download-progress', (ev, progressObj) => {
+       win.webContents.send('message', "Download in progress")
+   })
+   autoUpdater.on('update-downloaded', (ev, info) => {
+     win.webContents.send('message', 'Update downloaded.  Will quit and install in 5 seconds.');
+     // Wait 5 seconds, then quit and install
+     setTimeout(function() {
+       autoUpdater.quitAndInstall();
+     }, 5000)
+   })
+   // Wait a second for the window to exist before checking for updates.
+   setTimeout(function() {
+     autoUpdater.checkForUpdates()
+ }, 3000);
+})
+
+
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function() {
-    const menu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(menu)
-    createWindow()
+        const menu = Menu.buildFromTemplate(template)
+        Menu.setApplicationMenu(menu)
+        createWindow()
 
 })
 
@@ -322,3 +348,24 @@ app.on('browser-window-created', function() {
 ipc.on('close-starter', function(event, arg) {
     createMainWindow(arg);
 })
+
+
+
+
+
+function sendStatus(text) {
+  log.info(text);
+  win.webContents.on('dom-ready', () => {
+      win.webContents.send('message', text);
+
+  })
+}
+
+function getWindow(windowName) {
+  for (var i = 0; i < windowArray.length; i++) {
+    if (windowArray[i].name == windowName) {
+      return windowArray[i].window;
+    }
+  }
+  return null;
+}

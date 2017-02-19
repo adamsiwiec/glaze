@@ -40,19 +40,6 @@ createForm.on('submit', function (event) {
 	$('.space-error').text('');
 
 	if (validate($('.room').val(), $('.nick').val())) {
-        // const htmlPath = path.join('file://', __dirname, '../html/index.html?room=' + $('.room').val() + "&nick=" + $(".nick").val())
-        // win = new BrowserWindow({
-        //        width: 800,
-        //        height: 700
-        //    })
-            // win.on('resize', updateReply)
-            // win.on('move', updateReply)
-        // win.on('close', function () {
-        //    ipc.send('main-windows-closed');
-        //     win = null;
-        // })
-    //    win.loadURL(htmlPath)
-    //    win.show()
 
 		ipc.send('close-starter', {
 			room: $('.room').val(),
@@ -62,11 +49,7 @@ createForm.on('submit', function (event) {
 		var current = remote.getCurrentWindow();
 		current.close();
 
-        // function updateReply () {
-        //   const manageWindowReply = document.getElementById('manage-window-reply')
-        //   const message = `Size: ${win.getSize()} Position: ${win.getPosition()}`
-        //   manageWindowReply.innerText = message
-        // }
+
 	} else {
 		if (!$('.nick').val()) {
 			$('.nick-error').text('Please put in a Username');

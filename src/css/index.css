@@ -78,3 +78,15 @@ a:active {
     height: 30px;
     width: 30px;
 }
+
+.message {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    background-color: #FFB732;
+    padding: 5px;
+    font-size: 12px;
+
+
+
+}

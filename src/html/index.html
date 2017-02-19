@@ -35,10 +35,26 @@
         </div>
     </div>
 </div>
+
+
 </div>
 </div>
+
+
     <script src="../js/rtc.js"></script>
     <script src="../js/app.bundle.js"></script>
+    <script>
+
+    const ipc = require('electron').ipcRenderer;
+    const $ = require('jquery');
+
+    ipc.on('message', function(event, text) {
+        console.log(text, event);
+        var message = $('<div>', {"class": "message"});
+        message.text(text);
+        $( "body" ).append(message);
+    })
+</script>
 </body>
 
 </html>
