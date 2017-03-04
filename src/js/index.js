@@ -30,7 +30,7 @@ var webrtc = new SimpleWebRTC({
     // immediately ask for camera access
 	autoRequestMedia: true,
 	nick: nickname,
-	url: 'https://signal-master-qdoymkqwfc.now.sh',
+	url: 'https://signal-master-ouxposnkua.now.sh',
 	media: {
 		video: false,
 		audio: true

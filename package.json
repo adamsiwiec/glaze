@@ -1,6 +1,6 @@
 {
   "name": "glaze",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "A simple and fast P2P voice chat for gaming",
   "main": "main.js",
   "scripts": {
@@ -21,8 +21,8 @@
     "css-loader": "^0.26.1",
     "devtron": "^1.4.0",
     "electron": "^1.5.0",
-    "electron-builder": "^13.11.1",
-    "electron-builder-squirrel-windows": "^13.10.1",
+    "electron-builder": "^14.5.3",
+    "electron-builder-squirrel-windows": "^15.0.0",
     "electron-dl": "^1.6.0",
     "electron-packager": "^8.5.2",
     "file-loader": "^0.10.0",
