@@ -46,7 +46,7 @@
     ],
     "appId": "com.adamsiwiec.glaze",
     "mac": {
-      "target": "dmg"
+      "target": ["dmg", "zip"]
     },
     "win": {
       "target": "nsis"
