@@ -9,52 +9,59 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
-    <div class ="container-fluid">
-    <div class ="row">
-    <div class = "room-container col-4 col-xl-3">
-    <div class="room mt-2 col-offset-1">
-        <h4 class = "text-muted">Room: </h4>
-        <h5 class = 'display room-name'></h5>
-        <h4 class = "text-muted">Chat Count: </h4>
-        <h5 class = 'display chat-count'></h5>
-        <h4 class = "text-muted">Username: </h4>
-        <h5 class = 'display username'></h5>
-    </div>
-    <p class = "lead footer" id="me"> { } with <img class = "heart" src="../js/img/heart.svg"> by <a href="http://siwiec.us">Adam Siwiec</a></h3>
-</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="room-container col-4 col-xl-3">
+                <div class="room mt-2 col-offset-1">
+                    <h4 class="text-muted">Room: </h4>
+                    <h5 class='display room-name'></h5>
+                    <h4 class="text-muted">Chat Count: </h4>
+                    <h5 class='display chat-count'></h5>
+                    <h4 class="text-muted">Username: </h4>
+                    <h5 class='display username'></h5>
+                </div>
+                <p class="lead footer" id="me"> { } with <img class="heart" src="../js/img/heart.svg"> by <a href="http://siwiec.us">Adam Siwiec</a></h3>
+            </div>
 
-<div  class="right-status-container col-8 col-xl-9">
-    <div id="avatar"></div>
-    <div id="status-container">
-        <h4 class = "pl-1 pt-1">Status: </h4>
-        <div class = "pl-1" id = "status">
+            <div class="right-status-container col-8 col-xl-9">
+                <div id="avatar"></div>
+                <div id="status-container">
+                    <h4 class="pl-1 pt-1">Status: </h4>
+                    <div class="pl-1" id="status">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
-</div>
 
-
-</div>
-</div>
-
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
     <script src="../js/rtc.js"></script>
+    <script src="../js/xirsys_connect.js"></script>
+    <script src="../js/lib/xirsys.core.js"></script>
+    <script src="../js/lib/xirsys.api.js"></script>
+    <script src="../js/lib/xirsys.signal.js"></script>
+    <script src="../js/lib/xirsys.simplewebrtc.connection.js"></script>
+    <script src="../js/lib/xirsys.simplewebrtc.js"></script>
     <script src="../js/app.bundle.js"></script>
     <script>
+        const ipc = require('electron').ipcRenderer;
+        const $ = require('jquery');
 
-    const ipc = require('electron').ipcRenderer;
-    const $ = require('jquery');
-
-    ipc.on('message', function(event, text) {
-        console.log(text, event);
-        var message = $('<div>', {"class": "message"});
-        message.text(text);
-        $( "body" ).append(message);
-    })
-</script>
+        ipc.on('message', function(event, text) {
+            console.log(text, event);
+            var message = $('<div>', {
+                "class": "message"
+            });
+            message.text(text);
+            $("body").append(message);
+        })
+    </script>
 </body>
 
 </html>

@@ -3,3 +3,4 @@ node_modules
 *.app
 dist
 *.nupkg
+xirsys_connect.js
