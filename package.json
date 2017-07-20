@@ -21,6 +21,10 @@
     "devtron": "^1.4.0",
     "electron": "^1.5.0",
     "electron-builder": "^19.8.0",
+    "style-loader": "^0.18.2",
+    "image-webpack-loader": "^3.3.1",
+    "file-loader": "^0.11.2",
+    "css-loader": "^0.28.4",
     "webpack": "^3.0.0"
   },
   "build": {
@@ -46,11 +50,7 @@
     }
   },
   "dependencies": {
-    "css-loader": "^0.28.4",
     "electron-updater": "^2.7.1",
-    "file-loader": "^0.11.2",
-    "image-webpack-loader": "^3.3.1",
     "jquery": "^3.1.1",
-    "style-loader": "^0.18.2"
   }
 }
