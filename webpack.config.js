@@ -7,7 +7,7 @@ module.exports = {
     entry: SRC,
     output: {
         publicPath: 'src/js/',
-        path: './src/js',
+        path: __dirname + '/src/js',
         filename: 'app.bundle.js'
     },
     module: {

@@ -18,23 +18,10 @@
   "author": "Adam Siwiec",
   "license": "MIT",
   "devDependencies": {
-    "css-loader": "^0.28.0",
     "devtron": "^1.4.0",
     "electron": "^1.5.0",
-    "electron-builder": "^18.0.1",
-    "electron-builder-squirrel-windows": "^18.0.0",
-    "electron-dl": "^1.6.0",
-    "electron-packager": "^8.5.2",
-    "file-loader": "^0.11.1",
-    "image-webpack-loader": "^3.1.0",
-    "node-sass": "^4.1.1",
-    "postcss-loader": "^2.0.5",
-    "read-installed": "^4.0.3",
-    "resolve-url-loader": "^2.0.0",
-    "sass-loader": "^6.0.1",
-    "style-loader": "^0.18.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^2.2.1"
+    "electron-builder": "^19.8.0",
+    "webpack": "^3.0.0"
   },
   "build": {
     "publish": [
@@ -59,8 +46,11 @@
     }
   },
   "dependencies": {
-    "electron-log": "^2.2.3",
-    "electron-updater": "^1.7.1",
-    "jquery": "^3.1.1"
+    "css-loader": "^0.28.4",
+    "electron-updater": "^2.7.1",
+    "file-loader": "^0.11.2",
+    "image-webpack-loader": "^3.3.1",
+    "jquery": "^3.1.1",
+    "style-loader": "^0.18.2"
   }
 }
