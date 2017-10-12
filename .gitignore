@@ -4,3 +4,4 @@ node_modules
 dist
 *.nupkg
 xirsys_connect.js
+.yarnclean
