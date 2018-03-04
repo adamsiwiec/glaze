@@ -11,12 +11,12 @@ module.exports = {
         filename: 'app.bundle.js'
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.css$/,
-            loaders: ['style-loader', 'css-loader']
+            use: ['style-loader', 'css-loader']
         }, {
             test: /\.(jpg|png)$/,
-            loaders: ['file-loader?name=img/[name].[ext]', {
+            use: ['file-loader?name=img/[name].[ext]', {
                 loader: 'image-webpack-loader',
                 query: {
                     mozjpeg: {
@@ -37,13 +37,13 @@ module.exports = {
 
         }, {
             test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'url-loader?limit=10000&minetype=application/font-woff'
+            use: 'url-loader?limit=10000&minetype=application/font-woff'
         }, {
             test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loader: 'file-loader'
+            use: 'file-loader'
         }, {
             test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-            loaders: ['file-loader?name=img/[name].[ext]', {
+            use: ['file-loader', {
                 loader: 'image-webpack-loader',
                 query: {
                     mozjpeg: {
@@ -86,12 +86,8 @@ module.exports = {
             Tab: 'exports?Tab!bootstrap/js/dist/tab',
             Tooltip: 'exports?Tooltip!bootstrap/js/dist/tooltip',
             Util: 'exports?Util!bootstrap/js/dist/util'
-        }),
-
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
         })
+
+       
     ]
 };
