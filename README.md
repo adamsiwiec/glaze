@@ -31,6 +31,8 @@ $ git clone https://github.com/adamsiwiec/glaze .
 $ npm install
 $ npm start
 ```
+#### Authors
+- Adam Siwiec - [Website](https://siwiec.us)
 
 #### License [MIT License](LICENSE.md)
 
